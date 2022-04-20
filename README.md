@@ -2,7 +2,7 @@
 
 Restaurant backend API which accepts orders based on table number from various serving staff in the restaurant. It
 stores the all the items along with a cooking time for the item to be completed. HTTP REST is used, to bring request
-parameters into the application using spring-boot. The application performs below operations and produces results based
+parameters into the application using spring-boot, and Database manipulation are handled by pure JDBC. The application performs below operations and produces results based
 on different request/query parameters:
 
 * Add one or more items with a table number, remove an item for a table, and query the items still remaining for a
