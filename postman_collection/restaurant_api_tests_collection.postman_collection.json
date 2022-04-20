@@ -1,0 +1,151 @@
+{
+  "variables": [],
+  "info": {
+    "name": "restaurant_api_tests_collection",
+    "_postman_id": "17674fdc-090e-17cf-71bf-1a985e1c78b2",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "restaurent Menu1",
+      "request": {
+        "url": "http://localhost:8080/registerMenu",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"itemName\":\"Karage\",\n\t\"itemPrice\":\"200\",\n\t\"preparationTime\":\"10\"\n}"
+        },
+        "description": "menuCreation"
+      },
+      "response": []
+    },
+    {
+      "name": "restaurent Menu2",
+      "request": {
+        "url": "http://localhost:8080/registerMenu",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"itemName\":\"Ramen\",\n\t\"itemPrice\":\"350\",\n\t\"preparationTime\":\"15\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "addOrder",
+      "request": {
+        "url": "http://localhost:8080/addOrder",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"tableNo\":\"5\",\n\"itemIds\": [1, 2]\n}\n\t  \t\n"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "delete specific Item from table",
+      "request": {
+        "url": "http://localhost:8080/order/5/2",
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "get items for table",
+      "request": {
+        "url": "http://localhost:8080/order/5",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "get info of a specific item ordered for a table",
+      "request": {
+        "url": "http://localhost:8080/order/5/1",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "update preparation status of an item ordered for given table",
+      "request": {
+        "url": "http://localhost:8080/order/5/1/1",
+        "method": "PUT",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "get items based on preperation status for given table",
+      "request": {
+        "url": {
+          "raw": "http://localhost:8080/orders?tableNo=5&preparationStatus=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders"
+          ],
+          "query": [
+            {
+              "key": "tableNo",
+              "value": "5",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "preparationStatus",
+              "value": "1",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
